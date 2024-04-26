@@ -3,6 +3,7 @@ const { message } = require('telegraf/filters')
 const { PaymentGuide } = require("./Controller/ControllerPayments/PaymentGuide");
 const daftarHarga = require("./Controller/ControllerDigi/PriceList");
 const { keyboard, actionConfigs } = require('./Controller/dataVariable.js');
+const express = require('express')
 const axios = require('axios');
 require('dotenv').config()
 
@@ -222,6 +223,17 @@ function chunkArray(array, size) {
   }
   return result;
 }
+
+const app = express()
+const port = 3000
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
 
 
 bot.help((ctx) => ctx.reply('Send me a sticker'))
