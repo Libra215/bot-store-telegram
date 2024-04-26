@@ -1,0 +1,11 @@
+# Ignore .env file
+.env
+
+# Ignore node_modules folder
+node_modules/
+
+# Ignore package-lock.json file
+package-lock.json
+
+# Ignore bot-gemini-ai.zip file
+bot-gemini-ai.zip
